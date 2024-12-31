@@ -3,6 +3,7 @@ import streamlit as st
 from datetime import date, datetime
 from .energy_bills import EnergyBillsView
 
+
 class EditEnergyBillView(EnergyBillsView):
     """
     Class for editing an energy bill.

@@ -2,7 +2,6 @@ import streamlit as st
 import requests
 from .energy_bills import EnergyBillsView
 
-
 class ManagerEnergyBillsView(EnergyBillsView):
     """
     Class to manage energy bills.
@@ -70,14 +69,17 @@ class ManagerEnergyBillsView(EnergyBillsView):
                     st.rerun()
 
             with col2:
+                clicked = False
                 if st.button(
                     f"🗑️ Delete Bill {selected_bill['id']}",
                     key=f"delete_{selected_bill['id']}",
                 ):
-                    cls.delete_bill(selected_bill["id"])
-                    st.session_state.bills = cls.fetch_bills()
-                    st.rerun()
+                    clicked = True
 
+            if clicked:
+                cls.delete_bill(selected_bill["id"])
+                st.session_state.bills = cls.fetch_bills()
+                st.rerun()
     @classmethod
     def delete_bill(cls, bill_id: id) -> None:
         """
