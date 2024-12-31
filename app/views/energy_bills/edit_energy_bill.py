@@ -1,8 +1,7 @@
 import requests
 import streamlit as st
 from datetime import date, datetime
-from .energy_bills.energy_bills import EnergyBillsView
-
+from .energy_bills import EnergyBillsView
 
 class EditEnergyBillView(EnergyBillsView):
     """

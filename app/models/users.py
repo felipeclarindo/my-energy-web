@@ -89,7 +89,7 @@ class UsersModel:
         """
         try:
             response = requests.post(cls.BASE_URL + "/users/", json=user)
-            return response.json()
+            return response
         except Exception as e:
             return {"message": "Server error", "error": str(e)}
 
