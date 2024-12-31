@@ -53,7 +53,7 @@ class App:
                 st.title(":zap: My Energy")
                 st.markdown("---")
 
-                st.markdown("### **Menu Principal**")
+                st.markdown("### **Menu**")
                 if st.button(
                     "🏠 Dashboard", key="btn_dashboard", help="Control panel access"
                 ):
@@ -86,7 +86,7 @@ class App:
         """
         if not "user_login" in st.session_state:
             st.session_state.user_login = None
-
+ 
         LoginView.show()
 
         if st.session_state.logged_in:
