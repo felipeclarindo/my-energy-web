@@ -1,0 +1,6 @@
+streamlit==1.41.1
+requests==2.32.3
+email_validator==2.2.0
+validate-docbr==1.10.0
+plotly==5.24.1
+httpx==0.28.1
