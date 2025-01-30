@@ -1,12 +1,12 @@
 import streamlit as st
 from time import sleep
-from views.energy_bills.manager_energy_bills import ManagerEnergyBillsView
-from views.energy_bills.energy_bills import EnergyBillsView
-from views.energy_bills.add_energy_bills import AddEnergyBillsView
-from views.auth.register import RegisterView
-from views.dashboard.dashboard import DashboardView
-from views.auth.login import LoginView
-from views.energy_bills.edit_energy_bill import EditEnergyBillView
+from .views.energy_bills.manager_energy_bills import ManagerEnergyBillsView
+from .views.energy_bills.energy_bills import EnergyBillsView
+from .views.energy_bills.add_energy_bills import AddEnergyBillsView
+from .views.auth.register import RegisterView
+from .views.dashboard.dashboard import DashboardView
+from .views.auth.login import LoginView
+from .views.energy_bills.edit_energy_bill import EditEnergyBillView
 
 
 class App:
@@ -86,7 +86,7 @@ class App:
         """
         if not "user_login" in st.session_state:
             st.session_state.user_login = None
- 
+
         LoginView.show()
 
         if st.session_state.logged_in:
@@ -104,8 +104,3 @@ class App:
         if st.session_state.get("register"):
             st.session_state.page = "login"
             st.rerun()
-
-
-if __name__ == "__main__":
-    st.set_page_config(page_title="My Energy", page_icon=":zap:")
-    App.show()
