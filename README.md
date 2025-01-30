@@ -1,12 +1,14 @@
+🌍 [Leia em Português](README.pt-BR.md)
+
 # My Energy
 
-Web application to improve the issue of energy spending integrated with api developed in `django` and `django-ninja`.
+Web application in python using `streamlit` to improve the issue of energy spending integrated with api developed in `django` and `django-ninja`.
 
 ## Technologies Used
 
-Streamlit - Development of the interface
-request - Perform requests in api for manipulations in crud.
-Oracle Database - Standard database (can be changed as needed)
+- `Streamlit` - Development of the interface.
+- `requests` - Perform requests in api for manipulations in crud.
+- `Oracle Database` - Standard database (can be changed as needed).
 
 ## API Features
 
@@ -17,7 +19,7 @@ The API offers a number of features for handling and managing data. Some of the 
 - Update of specific records.
 - Deletion of data.
 
-## Running to Api
+## Steps to run and install the api
 
 1. Clone the Repository:
 
@@ -25,27 +27,43 @@ The API offers a number of features for handling and managing data. Some of the 
 git clone https://github.com/felipeclarindo/my-energy-api.git
 ```
 
-2. Install Dependencies :
+2. Enter directory:
+
+```bash
+cd my-energy-api
+```
+
+3. Create Virtual Environment:
+
+```bash
+python -m venv .venv
+```
+
+4. Activate the `Virtual Environment` running the `.bat` file in `.venv/Scripts/Activate.bat`.
+
+5. Install dependencies :
 
 ```bash
 pip install - r requirements.txt
 ```
 
-3. Configure Database and Migrations:
+6. Configure Database and Migrations:
 
 ```bash
 python ./src/manage.py
 ```
 
-4. Run Server:
+7. Run Server:
 
 ```bash
 python ./src/manage.py runserver
 ```
 
-Access API in http://localhost:8000/api.
+8. Access API in:
 
-## Installation and Configuration
+- http://localhost:8000/api
+
+## Steps to run and install the Front-end
 
 1. Clone the Repository:
 
@@ -53,19 +71,27 @@ Access API in http://localhost:8000/api.
 git clone https://github.com/felipeclarindo/my-energy.git
 ```
 
-2. Enter the directorate:
+2. Enter the directory:
 
 ```bash
-my-energy CD
+cd my-energy
 ```
 
-3. Install dependencies:
+3. Create Virtual Environment:
+
+```bash
+python -m venv .venv
+```
+
+4. Activate the `Virtual Environment` running the `.bat` file in `.venv/Scripts/Activate.bat`.
+
+5. Install dependencies:
 
 ```bash
 pip install - r requirements.txt
 ```
 
-3. Run application:
+6. Run application:
 
 ```bash
 streamlit run ./app/app.py
